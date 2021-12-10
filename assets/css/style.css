@@ -14,7 +14,8 @@ body {
 
 /*headings and logos*/
 
-h1,h2 {
+h1,
+h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -33,7 +34,8 @@ h1,h2 {
     letter-spacing: 4px;
 }
 
-#menu, #logo {
+#menu,
+#logo {
     line-height: 75px;
 }
 
@@ -56,6 +58,7 @@ h1,h2 {
 . active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /*hero image*/
 
 
@@ -65,29 +68,31 @@ h1,h2 {
     overflow: hidden;
 
     position: relative;
-} 
+}
 
-#cover-text, #cover-text h2 {
-    color:#fff;
+#cover-text,
+#cover-text h2 {
+    color: #fff;
 }
 
 #hero-image {
     height: 600px;
     width: 100%;
-    background:url(../images/hero-image.webp) no-repeat center center;
+    background: url(../images/hero-image.webp) no-repeat center center;
 
-/*animates zoom effect on loading page*/
+    /*animates zoom effect on loading page*/
 
-animation-name: hero-zoom;
-animation-duration:5s;
-animation-fill-mode:forwards;
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes hero-zoom {
-    from{
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.1);
     }
 }
@@ -104,13 +109,13 @@ animation-fill-mode:forwards;
     padding-top: 40px;
     padding-left: 10px;
 
-    background-color: rgba(241,109,107,.7);
+    background-color: rgba(241, 109, 107, .7);
 
     bottom: 30px;
     right: 150px;
 
     position: absolute;
-    
+
 }
 
 /*club ethos*/
@@ -123,7 +128,7 @@ animation-fill-mode:forwards;
     padding-top: 30px;
     width: 33%;
     float: left;
-    }
+}
 
 #right-about {
     padding-top: 30px;
@@ -141,6 +146,7 @@ hr {
     width: 100%;
     margin: 5px 0;
 }
+
 .left-about-heading {
     width: 60%;
     float: right;
@@ -174,7 +180,7 @@ hr {
 #circle-container {
     width: 300px;
     height: 300px;
-    padding:30px;
+    padding: 30px;
     border-style: solid;
     border-color: #ccc;
     border-width: 1px;
@@ -191,7 +197,7 @@ hr {
 /*event times*/
 
 #times {
-    background-image:url('../images/dublin-city.webp');
+    background-image: url('../images/dublin-city.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -212,24 +218,25 @@ hr {
 }
 
 #times h2 {
-    color:#fafafa;
+    color: #fafafa;
 }
+
 /*footer*/
 
 footer {
-    height:150px
+    height: 150px
 }
 
 .social-networks {
     text-align: center;
 }
 
-.social-networks li{
+.social-networks li {
     display: inline;
 }
 
 .social-networks i {
-    font-size:160% ;
+    font-size: 160%;
     margin: 1%;
     padding: 5%;
     color: #3a3a3a;
@@ -244,7 +251,7 @@ footer {
     column-gap: 0;
 }
 
-#photos > img {
+#photos>img {
     width: 100%;
 }
 
@@ -258,34 +265,37 @@ footer {
         height: 1200px;
         margin: 0 auto;
     }
-     #welcome {
-         padding: 30px 0;
-         margin: 0;
-     }
 
-     #left-about, #right-about {
-         width: 100%;
-         float: left;
-         padding: 0;
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
 
-     }
-     #center-about {
-         clear: both;
-         width: 100%;
-         float: left;
-         padding: 0;
-     }
+    #left-about,
+    #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
 
-     #times > div {
-         width: 100%;
-         clear: both;
-         height: 150px;
-         padding: 0;
-     } 
+    }
 
-     hr {
-         display: none;
-     }
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #times>div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
 }
 
 /* for medium screens sizes from 950px wide and down */
@@ -299,7 +309,7 @@ footer {
         margin-bottom: 20px;
         line-height: 25px;
     }
-    
+
     #cover-text {
         left: 0;
     }
@@ -311,15 +321,33 @@ footer {
     }
 
 
-.left-about-heading, .right-about-heading {
-    width: inherit;
+    .left-about-heading,
+    .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2,
+    .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p,
+    .right-about-heading p {
+        text-align: center;
+        padding: 0 20;
+    }
+
+    #photos {
+        column-count: 3;
+    }
 }
-.left-about-heading h2, .right-about-heading h2 {
-    width: 100%;
-    text-align: center;
-}
-.left-about-heading p, .right-about-heading p {
-    text-align: center;
-    padding: 0 20;
-}
+
+/* for small screen sizes 800px or less*/
+
+@media screen and (max-width: 800px)  {
+    #photos {
+        column-count: 2;
+    }
+    
 }
